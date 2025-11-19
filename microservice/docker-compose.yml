@@ -7,7 +7,9 @@ services:
     ports:
       - "8000:8000"
     environment:
-      - POLYGON_API_KEY=w4jzMUbCLJaVzSW8BJPgrTnvtMIL8t_J
+      - POLYGON_API_KEY=${POLYGON_API_KEY}
+    env_file:
+      - ../.env  # Load from parent directory .env file
     volumes:
       - ./outputs:/app/outputs  # Mount volume for CSV/chart outputs
     restart: unless-stopped
