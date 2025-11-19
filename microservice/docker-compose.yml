@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  options-api:
+    build: .
+    container_name: options-microservice
+    ports:
+      - "8000:8000"
+    environment:
+      - POLYGON_API_KEY=w4jzMUbCLJaVzSW8BJPgrTnvtMIL8t_J
+    volumes:
+      - ./outputs:/app/outputs  # Mount volume for CSV/chart outputs
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 5s
+

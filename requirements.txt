@@ -1,0 +1,27 @@
+# Core LangChain and LangGraph
+langchain==0.3.7
+langchain-core==0.3.15
+langgraph==0.2.45
+langgraph.checkpoint.sqlite>=2.0.0
+langchain-openai==0.2.3
+langchain-tavily==0.2.0
+
+# API clients
+requests==2.31.0
+openai==1.54.3
+
+# Data visualization
+matplotlib==3.8.2
+
+# Environment variables
+python-dotenv==1.0.0
+
+# RAG Knowledge Base
+chromadb==0.4.22
+sqlalchemy==2.0.23
+
+# Optional: Development tools
+# pytest==7.4.3
+# black==23.12.1
+# flake8==6.1.0
+
